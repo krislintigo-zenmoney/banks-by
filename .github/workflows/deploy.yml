@@ -29,4 +29,4 @@ jobs:
 
             source scripts/deploy/main.sh
             
-            pm2 reload ecosystem.config.js
+            pm2 reload ecosystem.config.cjs
