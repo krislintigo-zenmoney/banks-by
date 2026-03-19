@@ -5,12 +5,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'ru' },
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.svg' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
       title: 'Дзен-мани - Банки Беларуси',
       meta: [
         {
           name: 'description',
-          content: '',
+          content:
+            'Каталог банков Беларуси Zenmoney (Дзен-мани) со статусами синхронизации и особенностями подключения.',
         },
         {
           name: 'keywords',
@@ -28,5 +29,5 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2026-03-20',
 })

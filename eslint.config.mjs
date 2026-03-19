@@ -30,7 +30,6 @@ export default tseslint.config(
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
         parser: tseslint.parser,
-        project: './tsconfig.json',
         extraFileExtensions: ['.vue'],
       },
     },

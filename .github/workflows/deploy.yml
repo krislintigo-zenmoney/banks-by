@@ -1,0 +1,32 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v0.1.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/zenmoney-belarus-banks
+            git pull
+            
+            source ~/.nvm/nvm.sh
+            
+            pnpm recursive install --frozen-lockfile
+
+            source scripts/deploy/main.sh
+            
+            pm2 reload ecosystem.config.js

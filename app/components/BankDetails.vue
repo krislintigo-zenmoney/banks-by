@@ -98,7 +98,6 @@
 <script setup lang="ts">
 import type { Bank } from '~/types/bank.types'
 import { SYNC_TYPES_MAP } from '~/constants/sync-types'
-import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
 
 defineProps<{ bank: Bank }>()
 </script>

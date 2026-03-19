@@ -2,8 +2,8 @@
   <div>
     <div class="search mb-6">
       <input
-        class="w-full"
         v-model="search"
+        class="w-full"
         type="search"
         placeholder="Поиск банка..."
         autocomplete="off"

@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col sm:flex-row">
+  <div class="flex flex-col lg:flex-row">
     <SidebarNav :banks="banks" :class="{ 'blur-md': isMenuOpen }" />
 
     <button
-      class="fixed bottom-5 right-5 z-50 size-14 pb-1 rounded-full bg-primary text-3xl"
+      class="lg:hidden fixed bottom-5 right-5 z-50 size-14 pb-1 rounded-full bg-primary text-3xl"
       @click="isMenuOpen = !isMenuOpen"
     >
       {{ isMenuOpen ? '×' : '☰' }}
@@ -24,8 +24,8 @@
       </div>
     </Transition>
 
-    <main class="mx-auto p-6" :class="{ 'blur-md': isMenuOpen }">
-      <div class="max-w-[1000px]" v-if="currentBank">
+    <main class="flex-1 p-6" :class="{ 'blur-md': isMenuOpen }">
+      <div class="mx-auto max-w-[1000px]">
         <StatsGrid :active="stats.active" :warning="stats.warning" :down="stats.down" />
         <slot />
       </div>
@@ -34,25 +34,18 @@
 </template>
 
 <script setup lang="ts">
-import { useBanks } from '~/composables/useBanks'
-
 const route = useRoute()
 const { banks, getBankById, getStats } = useBanks()
 
 const isMenuOpen = ref(false)
 
-const currentBank = computed(() => getBankById(String(route.params.bankId)))
+const bankId = computed(() => route.params.bankId)
+const currentBank = computed(() => getBankById(String(bankId.value)))
 const stats = computed(() => getStats(banks.value))
 
-if (import.meta.server && !currentBank.value) {
+if (bankId.value && !currentBank.value) {
   throw createError({ statusCode: 404, statusMessage: 'Bank not found' })
 }
-
-watchEffect(() => {
-  if (import.meta.client && !currentBank.value) {
-    throw createError({ statusCode: 404, statusMessage: 'Bank not found' })
-  }
-})
 
 watch(
   () => route.params.bankId,

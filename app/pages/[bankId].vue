@@ -6,8 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import { useBanks } from '~/composables/useBanks'
-
 const route = useRoute()
 const { getBankById } = useBanks()
 

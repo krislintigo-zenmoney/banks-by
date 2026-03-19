@@ -117,7 +117,7 @@
     "syncStatus": "down",
 
     "syncType": "web",
-    "category": "Иностранный",
+    "category": "Флагман",
     "website": "sber-bank.by",
     "lastCheck": "18 марта 2026",
 
@@ -201,7 +201,7 @@
     "syncStatus": "down",
 
     "syncType": "mobile",
-    "category": "Коммерческий",
+    "category": "Флагман",
     "website": "belgazprombank.by",
     "lastCheck": "18 марта 2026",
 
@@ -229,7 +229,7 @@
     "syncStatus": "active",
 
     "syncType": "mobile",
-    "category": "Коммерческий",
+    "category": "Системный",
     "website": "bnb.by",
     "lastCheck": "18 марта 2026",
 
@@ -257,7 +257,7 @@
     "syncStatus": "down",
 
     "syncType": "mobile",
-    "category": "Государственный",
+    "category": "Системный",
     "website": "belapb.by",
     "lastCheck": "18 марта 2026",
 
@@ -285,7 +285,7 @@
     "syncStatus": "down",
 
     "syncType": "mobile",
-    "category": "Государственный",
+    "category": "Системный",
     "website": "belinvestbank.by",
     "lastCheck": "18 марта 2026",
 
@@ -313,7 +313,7 @@
     "syncStatus": "not-connected",
 
     "syncType": "web",
-    "category": "Иностранный",
+    "category": "Системный",
     "website": "vtb.by",
     "lastCheck": "18 марта 2026",
 
@@ -341,7 +341,7 @@
     "syncStatus": "not-connected",
 
     "syncType": "web",
-    "category": "Иностранный",
+    "category": "Системный",
     "website": "belveb.by",
     "lastCheck": "18 марта 2026",
 
@@ -370,7 +370,7 @@
     "syncStatus": "active",
 
     "syncType": "mobile",
-    "category": "Флагман",
+    "category": "Нишевый",
     "website": "dabrabyt.by",
     "lastCheck": "18 марта 2026",
 
@@ -420,7 +420,7 @@
     "syncStatus": "not-connected",
 
     "syncType": "web",
-    "category": "Коммерческий",
+    "category": "Нишевый",
     "website": "tb.by",
     "lastCheck": "18 марта 2026",
 
@@ -449,7 +449,7 @@
     "syncStatus": "active",
 
     "syncType": "mobile",
-    "category": "Флагман",
+    "category": "Нишевый",
     "website": "rbank.by",
     "lastCheck": "18 марта 2026",
 
@@ -500,7 +500,7 @@
     "syncStatus": "not-connected",
 
     "syncType": "mobile",
-    "category": "Флагман",
+    "category": "Нишевый",
     "website": "neobank.by",
     "lastCheck": "18 марта 2026",
 
@@ -550,7 +550,7 @@
     "syncStatus": "active",
 
     "syncType": "web",
-    "category": "Коммерческий",
+    "category": "Нишевый",
     "website": "rrb.by",
     "lastCheck": "18 марта 2026",
 
@@ -578,7 +578,7 @@
     "syncStatus": "warning",
 
     "syncType": "mobile",
-    "category": "Коммерческий",
+    "category": "Нишевый",
     "website": "bsb.by",
     "lastCheck": "18 марта 2026",
 
@@ -608,7 +608,7 @@
     "syncStatus": "active",
 
     "syncType": "web",
-    "category": "Коммерческий",
+    "category": "Нишевый",
     "website": "paritetbank.by",
     "lastCheck": "18 марта 2026",
 
@@ -636,7 +636,7 @@
     "syncStatus": "down",
 
     "syncType": "web",
-    "category": "Коммерческий",
+    "category": "Нишевый",
     "website": "statusbank.by",
     "lastCheck": "18 марта 2026",
 
@@ -664,7 +664,7 @@
     "syncStatus": "not-connected",
 
     "syncType": "web",
-    "category": "Иностранный",
+    "category": "Нишевый",
     "website": "zepterbank.by",
     "lastCheck": "18 марта 2026",
 
