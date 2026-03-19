@@ -6,7 +6,7 @@
           <span class="size-3 rounded-full" :class="`bg-${status.color}`" />
           <span :class="`text-${status.color}`">{{ status.label }}</span>
         </div>
-        <h2 class="mb-3 text-5xl">{{ bank.name }}</h2>
+        <h2 class="mb-3 text-5xl hyphens-auto">{{ bank.name }}</h2>
         <div class="text-base text-muted">
           <span>Для обновления информации по этому банку напишите сюда:</span>
           <NuxtLink class="text-primary" to="https://t.me/krislintigo" external target="_blank">

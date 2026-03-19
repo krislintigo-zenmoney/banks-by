@@ -26,12 +26,13 @@
       :text="bank.restrictions"
       class="col-span-12 sm:col-span-8"
     >
-      <div class="flex flex-col gap-4">
+      <div v-if="bank.updates.length" class="flex flex-col gap-4">
         <div v-for="update in bank.updates" :key="update.text">
           <div class="mb-1 text-sm text-muted">{{ update.date }}</div>
           <div class="text-sm">{{ update.text }}</div>
         </div>
       </div>
+      <p v-else>Здесь пока пусто.</p>
     </BankCard>
 
     <div class="grid grid-cols-12 gap-4 col-span-12 sm:col-span-6">

@@ -7,7 +7,7 @@
       <span class="size-3 rounded-full" :class="`bg-${status.color}`" />
       <div class="text-base">
         <div class="font-semibold">{{ bank.name }}</div>
-        <div class="text-muted">{{ status.label }}</div>
+        <div class="text-muted">{{ bank.status.title }}</div>
       </div>
     </div>
   </NuxtLink>
