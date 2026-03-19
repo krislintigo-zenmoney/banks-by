@@ -1,0 +1,46 @@
+:root {
+    --text: #eef2ff;
+    --text-soft: oklch(70.7% 0.165 254.624);
+
+    --transition: 240ms cubic-bezier(.2,.8,.2,1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt {
+    margin: 0;
+    min-height: 100%;
+}
+
+html {
+    font-size: 12px;
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    background: #0b1020;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+

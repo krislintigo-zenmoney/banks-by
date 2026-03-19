@@ -1,0 +1,688 @@
+[
+  {
+    "id": "alfabank",
+    "name": "Альфа-Банк",
+    "engName": "Alfa-Bank",
+    "syncStatus": "active",
+
+    "syncType": "open-api",
+    "category": "Флагман",
+    "website": "alfabank.by",
+    "lastCheck": "19 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Массовых ошибок синхронизации не наблюдается, возможны единичные сбои."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Авторизация по идентификационному номеру и дате выдачи паспорта. При первом подключении потребуется ввести код из SMS."
+    },
+
+    "updates": [],
+
+    "features": {
+      "title": "Стабильная работа",
+      "text": [
+        "Может периодически не синхронизироваться с ошибкой `invalid_client`. Повторная попытка обычно успешная.",
+        "Для успешной синхронизации необходим хотя бы один вход через старое приложение Insync (можно скачивания и входа в аккаунт его можно удалить)",
+        "Если шаги не помогли - напишите в поддержку Альфа-банка, она лояльна к Дзен-мани и поможет."
+      ]
+    },
+    "integration": ["Использует открытое API для получения данных."],
+    "supported": {
+      "accounts": {
+        "status": "green",
+        "text": "Текущие счета",
+        "description": ""
+      },
+      "cards": {
+        "status": "green",
+        "text": "Карты",
+        "description": ""
+      },
+      "deposits": {
+        "status": "muted",
+        "text": "Вклады",
+        "description": "нет информации"
+      },
+      "credits": {
+        "status": "muted",
+        "text": "Кредиты",
+        "description": "нет информации"
+      }
+    }
+  },
+  {
+    "id": "mtbank",
+    "name": "МТБанк",
+    "engName": "MTBank",
+    "syncStatus": "active",
+    "syncType": "web",
+    "category": "Флагман",
+    "website": "mtbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Синхронизация работает для большинства клиентов на постоянной основе."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю. При включенной двухфакторной аутентификации требуется ввод SMS при каждой синхронизации."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Стабильная работа",
+      "text": [
+        "Некоторые пользователи сталкиваются с ошибками синхронизации на стадии получения операций по счетам. Причина не до конца понятна."
+      ]
+    },
+    "integration": ["Использует интернет-банкинг для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "belarusbank",
+    "name": "Беларусбанк",
+    "engName": "Belarusbank",
+    "syncStatus": "down",
+
+    "syncType": "web",
+    "category": "Флагман",
+    "website": "belarusbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Не работает",
+      "text": "Синхронизация не работает, сломаны hold-операции."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю от интернет-банкинга. Для каждой синхронизации требуется либо карта кодов (настраивается один раз), либо ввод кода из SMS."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует интернет-банкинг для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "sberbank",
+    "name": "Сбербанк",
+    "engName": "Sberbank",
+    "syncStatus": "down",
+
+    "syncType": "web",
+    "category": "Иностранный",
+    "website": "sber-bank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Не работает",
+      "text": "Синхронизация не работает, проблемы с авторизацией."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует интернет-банкинг для получения данных."],
+    "supported": {}
+  },
+
+  {
+    "id": "priorbank",
+    "name": "Приорбанк",
+    "engName": "Priorbank",
+    "syncStatus": "active",
+
+    "syncType": "mobile",
+    "category": "Флагман",
+    "website": "priorbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Ошибок синхронизации не наблюдается."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [
+      {
+        "date": "16 марта 2026",
+        "text": "Непродолжительное отключение синхронизации. После обновления версии на следующий день все работает стабильно."
+      }
+    ],
+
+    "features": {
+      "title": "Стабильная работа",
+      "text": ["Нет сообщений о некорректном поведении синхронизации"]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {
+      "accounts": {
+        "status": "green",
+        "text": "Текущие счета",
+        "description": ""
+      },
+      "cards": {
+        "status": "green",
+        "text": "Карты",
+        "description": ""
+      },
+      "deposits": {
+        "status": "muted",
+        "text": "Вклады",
+        "description": "нет информации"
+      },
+      "credits": {
+        "status": "muted",
+        "text": "Кредиты",
+        "description": "нет информации"
+      }
+    }
+  },
+  {
+    "id": "belgazprombank",
+    "name": "Белгазпромбанк",
+    "engName": "Belgazprombank",
+    "syncStatus": "down",
+
+    "syncType": "mobile",
+    "category": "Коммерческий",
+    "website": "belgazprombank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Не работает",
+      "text": "Синхронизация не работает, требуется дополнительная авторизация для запроса выписок."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "bnb",
+    "name": "БНБ-Банк",
+    "engName": "BNB Bank",
+    "syncStatus": "active",
+
+    "syncType": "mobile",
+    "category": "Коммерческий",
+    "website": "bnb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Сообщений об ошибках не замечено."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "belapb",
+    "name": "Белагропромбанк",
+    "engName": "Belagroprombank",
+    "syncStatus": "down",
+
+    "syncType": "mobile",
+    "category": "Государственный",
+    "website": "belapb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Не работает",
+      "text": "Синхронизация не работает."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "belinvestbank",
+    "name": "Белинвестбанк",
+    "engName": "Belinvestbank",
+    "syncStatus": "down",
+
+    "syncType": "mobile",
+    "category": "Государственный",
+    "website": "belinvestbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Не работает",
+      "text": "Синхронизация не работает."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "vtb",
+    "name": "ВТБ",
+    "engName": "VTB",
+    "syncStatus": "not-connected",
+
+    "syncType": "web",
+    "category": "Иностранный",
+    "website": "vtb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Нет синхронизации",
+      "text": "Плагин синхронизации отсутствует."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["В данный момент отсутствует."],
+    "supported": {}
+  },
+  {
+    "id": "belveb",
+    "name": "БелВЭБ",
+    "engName": "BelVEB",
+    "syncStatus": "not-connected",
+
+    "syncType": "web",
+    "category": "Иностранный",
+    "website": "belveb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Нет синхронизации",
+      "text": "Плагин синхронизации отсутствует."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["В данный момент отсутствует."],
+    "supported": {}
+  },
+
+  {
+    "id": "dabrabyt",
+    "name": "Дабрабыт",
+    "engName": "Dabrabyt",
+    "syncStatus": "active",
+
+    "syncType": "mobile",
+    "category": "Флагман",
+    "website": "dabrabyt.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Сообщений об ошибках не замечено."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Неизвестно."],
+    "supported": {
+      "accounts": {
+        "status": "green",
+        "text": "Текущие счета",
+        "description": ""
+      },
+      "cards": {
+        "status": "green",
+        "text": "Карты",
+        "description": ""
+      },
+      "deposits": {
+        "status": "muted",
+        "text": "Вклады",
+        "description": "нет информации"
+      },
+      "credits": {
+        "status": "muted",
+        "text": "Кредиты",
+        "description": "нет информации"
+      }
+    }
+  },
+  {
+    "id": "technobank",
+    "name": "Технобанк",
+    "engName": "Technobank",
+    "syncStatus": "not-connected",
+
+    "syncType": "web",
+    "category": "Коммерческий",
+    "website": "tb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Нет синхронизации",
+      "text": "Плагин синхронизации отсутствует."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["В данный момент отсутствует."],
+    "supported": {}
+  },
+
+  {
+    "id": "rbank",
+    "name": "Банк Решение",
+    "engName": "Solution Bank",
+    "syncStatus": "active",
+
+    "syncType": "mobile",
+    "category": "Флагман",
+    "website": "rbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Сообщений об ошибках не замечено."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {
+      "accounts": {
+        "status": "green",
+        "text": "Текущие счета",
+        "description": ""
+      },
+      "cards": {
+        "status": "green",
+        "text": "Карты",
+        "description": ""
+      },
+      "deposits": {
+        "status": "muted",
+        "text": "Вклады",
+        "description": "нет информации"
+      },
+      "credits": {
+        "status": "muted",
+        "text": "Кредиты",
+        "description": "нет информации"
+      }
+    }
+  },
+
+  {
+    "id": "neobank",
+    "name": "Нео Банк Азия",
+    "engName": "NeoBank",
+    "syncStatus": "not-connected",
+
+    "syncType": "mobile",
+    "category": "Флагман",
+    "website": "neobank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Нет синхронизации",
+      "text": "Плагин синхронизации отсутствует."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["В данный момент недоступно."],
+    "supported": {
+      "accounts": {
+        "status": "green",
+        "text": "Текущие счета",
+        "description": ""
+      },
+      "cards": {
+        "status": "green",
+        "text": "Карты",
+        "description": ""
+      },
+      "deposits": {
+        "status": "muted",
+        "text": "Вклады",
+        "description": "нет информации"
+      },
+      "credits": {
+        "status": "muted",
+        "text": "Кредиты",
+        "description": "нет информации"
+      }
+    }
+  },
+  {
+    "id": "rrb",
+    "name": "Банк РРБ",
+    "engName": "Bank RRB",
+    "syncStatus": "active",
+
+    "syncType": "web",
+    "category": "Коммерческий",
+    "website": "rrb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Сообщений об ошибках не замечено."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует интернет-банкинг для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "bsb",
+    "name": "БСБ Банк",
+    "engName": "BSB Bank",
+    "syncStatus": "warning",
+
+    "syncType": "mobile",
+    "category": "Коммерческий",
+    "website": "bsb.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает неточно",
+      "text": "Синхронизация работает, но получаемые данные не всегда верны."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Проблемы с балансом",
+      "text": [
+        "Баланс счетов обновляется спустя время, но транзакции появляются сразу. Это вызывает расхождения в балансе между синхронизациями."
+      ]
+    },
+    "integration": ["Использует мобильное приложение для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "paritetbank",
+    "name": "Паритетбанк",
+    "engName": "Paritetbank",
+    "syncStatus": "active",
+
+    "syncType": "web",
+    "category": "Коммерческий",
+    "website": "paritetbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Работает",
+      "text": "Сообщений об ошибках не замечено."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Стабильная работа",
+      "text": ["Сообщений об ошибках синхронизации не поступало."]
+    },
+    "integration": ["Использует интернет-банкинг для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "statusbank",
+    "name": "СтатусБанк",
+    "engName": "StatusBank",
+    "syncStatus": "down",
+
+    "syncType": "web",
+    "category": "Коммерческий",
+    "website": "statusbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Будет исправлено",
+      "text": "Ожидается починка в ближайшее время."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["Использует интернет-банкинг для получения данных."],
+    "supported": {}
+  },
+  {
+    "id": "zepterbank",
+    "name": "Цептер Банк",
+    "engName": "Zepter Bank",
+    "syncStatus": "not-connected",
+
+    "syncType": "web",
+    "category": "Иностранный",
+    "website": "zepterbank.by",
+    "lastCheck": "18 марта 2026",
+
+    "status": {
+      "title": "Скоро будет доступно",
+      "text": "Разработка синхронизации на финишной прямой."
+    },
+    "connection": {
+      "title": "Способ авторизации",
+      "text": "Вход по логину и паролю."
+    },
+
+    "updates": [],
+    "features": {
+      "title": "Неизвестно",
+      "text": ["Особенности синхронизации неизвестны."]
+    },
+    "integration": ["В данный момент отсутствует, но скоро будет доступна."],
+    "supported": {}
+  }
+]
