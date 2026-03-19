@@ -13,7 +13,7 @@
       <div>
         <NuxtLink
           :to="`${banks[0].id}`"
-          class="inline-flex justify-center items-center px-4 py-3 bg-primary rounded-xl"
+          class="inline-flex justify-center items-center px-4 py-3 bg-primary rounded-xl text-black"
           >Перейти к банкам</NuxtLink
         >
       </div>
