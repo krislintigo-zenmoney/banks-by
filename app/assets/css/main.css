@@ -1,8 +1,6 @@
 :root {
     --text: #eef2ff;
     --text-soft: oklch(70.7% 0.165 254.624);
-
-    --transition: 240ms cubic-bezier(.2,.8,.2,1);
 }
 
 * {

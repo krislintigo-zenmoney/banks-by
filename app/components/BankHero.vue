@@ -49,5 +49,3 @@ const props = defineProps<{ bank: Bank }>()
 
 const status = computed(() => BANK_STATUSES_MAP[props.bank.syncStatus])
 </script>
-
-<style scoped></style>

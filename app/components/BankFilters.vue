@@ -3,7 +3,7 @@
     <div class="search mb-6">
       <input
         v-model="search"
-        class="w-full"
+        class="w-full p-4 rounded-2xl bg-white/3 outline-none focus:ring-1 focus:ring-primary"
         type="search"
         placeholder="Поиск банка..."
         autocomplete="off"
@@ -48,21 +48,3 @@ const filteredBanks = computed<Bank[]>(() => {
   })
 })
 </script>
-
-<style scoped>
-.search input {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  padding: 14px 16px;
-  border-radius: 16px;
-  outline: none;
-  transition:
-    border-color var(--transition),
-    background var(--transition),
-    transform var(--transition);
-}
-
-.search input:focus {
-  outline: 1px solid var(--text-soft);
-}
-</style>

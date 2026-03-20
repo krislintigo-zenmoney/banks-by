@@ -17,9 +17,7 @@
 import type { Bank } from '~/types/bank.types'
 import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
 
-const props = defineProps<{
-  bank: Bank
-}>()
+const props = defineProps<{ bank: Bank }>()
 
 const status = computed(() => BANK_STATUSES_MAP[props.bank.syncStatus])
 </script>

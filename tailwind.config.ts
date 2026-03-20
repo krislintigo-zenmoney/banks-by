@@ -9,6 +9,7 @@ export default {
         red: '#ef4444',
       },
       opacity: {
+        3: '0.03',
         7: '0.07',
       },
     },

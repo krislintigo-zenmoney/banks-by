@@ -28,9 +28,5 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  active: number
-  warning: number
-  down: number
-}>()
+defineProps<{ active: number; warning: number; down: number }>()
 </script>
