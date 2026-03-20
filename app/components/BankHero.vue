@@ -10,7 +10,7 @@
         <div class="text-base text-muted">
           <span>Для обновления информации по этому банку напишите сюда:</span>
           <NuxtLink class="text-primary" to="https://t.me/krislintigo" external target="_blank">
-            Telegram @krislitigo
+            Telegram @krislintigo
           </NuxtLink>
         </div>
       </div>
