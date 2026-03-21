@@ -1,10 +1,13 @@
 {
   "syncStatus": "active",
+
   "lastCheck": "20 марта 2026",
+
   "status": {
     "title": "Работает",
     "text": "Сообщений об ошибках не замечено."
   },
+
   "updates": [
     {
       "date": "20 марта 2026",
