@@ -33,5 +33,4 @@ export interface Bank {
     'accounts' | 'cards' | 'deposits' | 'credits',
     { status: string; text: string; description: string }
   >
-  restrictions: string
 }

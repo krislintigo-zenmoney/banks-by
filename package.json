@@ -3,11 +3,13 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "pnpm banks:build && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "banks:build": "node scripts/build-banks.mjs",
+    "banks:watch": "node scripts/build-banks.mjs && node scripts/watch-banks.mjs"
   },
   "dependencies": {
     "nuxt": "^4.4.2"
@@ -15,6 +17,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
+    "chokidar": "^5.0.0",
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",

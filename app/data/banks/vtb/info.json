@@ -1,0 +1,9 @@
+{
+  "id": "vtb",
+  "name": "ВТБ",
+  "engName": "VTB",
+  "syncType": "web",
+  "category": "Системный",
+  "website": "vtb.by",
+  "rating": 1205
+}

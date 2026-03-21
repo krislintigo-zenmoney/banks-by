@@ -1,0 +1,9 @@
+{
+  "syncStatus": "not-connected",
+  "lastCheck": "18 марта 2026",
+  "status": {
+    "title": "Нет синхронизации",
+    "text": "Плагин синхронизации отсутствует."
+  },
+  "updates": []
+}
