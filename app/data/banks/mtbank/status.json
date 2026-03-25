@@ -1,9 +1,12 @@
 {
-  "syncStatus": "active",
+  "syncStatus": "warning",
+
   "lastCheck": "18 марта 2026",
+
   "status": {
     "title": "Работает",
     "text": "Синхронизация работает для большинства клиентов на постоянной основе."
   },
+
   "updates": []
 }
