@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
 
   app: {
+    baseURL: '/banks/by',
     head: {
       htmlAttrs: { lang: 'ru' },
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
