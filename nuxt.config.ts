@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     baseURL: '/banks/by',
     head: {
       htmlAttrs: { lang: 'ru' },
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/banks/by/icon.png' }],
       title: 'Дзен-мани - Банки Беларуси',
       meta: [
         {
