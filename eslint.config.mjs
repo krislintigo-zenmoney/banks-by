@@ -5,11 +5,10 @@ import vueParser from 'vue-eslint-parser'
 export default createConfig({
   ignores: ['**/dist/**', '**/node_modules/**', '**/.nuxt/**', '**/.output/**'],
   files: ['**/*.{ts,vue}'],
-  globals: 'mixed',
+  globals: 'browser',
   extraExtends: [...vue.configs['flat/recommended']],
   extraRules: {
     'vue/multi-word-component-names': 'off', // Disable for pages
-    '@typescript-eslint/no-explicit-any': 'warn',
   },
   extraConfigs: [
     // Enable Vue parser for .vue files

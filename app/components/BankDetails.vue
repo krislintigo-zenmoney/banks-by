@@ -20,12 +20,7 @@
       />
     </div>
 
-    <BankCard
-      eyebrow="Обновления"
-      title="История изменений"
-      :text="bank.restrictions"
-      class="col-span-12 sm:col-span-8"
-    >
+    <BankCard eyebrow="Обновления" title="История изменений" class="col-span-12 sm:col-span-8">
       <div v-if="bank.updates.length" class="flex flex-col gap-4">
         <div v-for="update in bank.updates" :key="update.text">
           <div class="mb-1 text-sm text-muted">{{ update.date }}</div>
