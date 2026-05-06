@@ -1,4 +1,5 @@
-import banksData from '../data/generated/banks.json'
+import banksData from '../../.generated/banks.json'
+
 import type { Bank } from '~/types/bank.types'
 
 export const useBanks = () => {

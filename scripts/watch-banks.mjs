@@ -25,6 +25,6 @@ async function rebuild(_, path) {
   }
 }
 
-chokidar.watch('app/data/banks', { ignoreInitial: true }).on('all', rebuild)
+chokidar.watch('content/banks', { ignoreInitial: true }).on('all', rebuild)
 
-console.log('[watch-banks] watching data/banks...')
+console.log('[watch-banks] watching content/banks...')
