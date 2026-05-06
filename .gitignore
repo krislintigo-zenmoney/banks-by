@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # Generated files
-/app/data/generated/
+.generated/

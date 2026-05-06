@@ -14,8 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Bank } from '~/types/bank.types'
 import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
+import type { Bank } from '~/types/bank.types'
 
 const props = defineProps<{ bank: Bank }>()
 

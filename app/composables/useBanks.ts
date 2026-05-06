@@ -1,5 +1,5 @@
-import banksData from '../data/generated/banks.json'
 import type { Bank } from '~/types/bank.types'
+import banksData from '~~/.generated/banks.json'
 
 export const useBanks = () => {
   const banks = computed(() => banksData as Bank[])

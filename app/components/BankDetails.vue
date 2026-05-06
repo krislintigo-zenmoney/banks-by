@@ -20,12 +20,7 @@
       />
     </div>
 
-    <BankCard
-      eyebrow="Обновления"
-      title="История изменений"
-      :text="bank.restrictions"
-      class="col-span-12 sm:col-span-8"
-    >
+    <BankCard eyebrow="Обновления" title="История изменений" class="col-span-12 sm:col-span-8">
       <div v-if="bank.updates.length" class="flex flex-col gap-4">
         <div v-for="update in bank.updates" :key="update.text">
           <div class="mb-1 text-sm text-muted">{{ update.date }}</div>
@@ -96,8 +91,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Bank } from '~/types/bank.types'
 import { SYNC_TYPES_MAP } from '~/constants/sync-types'
+import type { Bank } from '~/types/bank.types'
 
 defineProps<{ bank: Bank }>()
 </script>

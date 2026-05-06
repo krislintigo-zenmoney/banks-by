@@ -1,8 +1,8 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
 
-const BANKS_DIR = path.resolve('app/data/banks')
-const OUTPUT_FILE = path.resolve('app/data/generated/banks.json')
+const BANKS_DIR = path.resolve('content/banks')
+const OUTPUT_FILE = path.resolve('.generated/banks.json')
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, 'utf-8')
