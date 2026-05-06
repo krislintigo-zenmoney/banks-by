@@ -8,6 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "eslint:all": "eslint",
+    "eslint:errors": "eslint --quiet",
+    "ts:check": "tsc -b --noemit",
+    "prettier:check": "prettier \"**/*.{ts,js,vue}\" --check",
+    "prettier:fix": "prettier \"**/*.{ts,js,vue}\" --write",
     "banks:build": "node scripts/build-banks.mjs",
     "banks:watch": "node scripts/build-banks.mjs && node scripts/watch-banks.mjs"
   },
@@ -21,6 +26,7 @@
     "eslint": "^9.39.4",
     "eslint-plugin-vue": "^10.8.0",
     "prettier": "^3.8.1",
+    "typescript": "^6.0.3",
     "vue-eslint-parser": "^10.4.0"
   },
   "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
