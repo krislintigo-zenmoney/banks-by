@@ -1,9 +1,9 @@
 {
-  "syncStatus": "down",
-  "lastCheck": "18 марта 2026",
+  "syncStatus": "active",
+  "lastCheck": "20 мая 2026",
   "status": {
-    "title": "Не работает",
-    "text": "Синхронизация не работает."
+    "title": "Работает",
+    "text": "Сообщений об ошибках не замечено."
   },
   "updates": []
 }
