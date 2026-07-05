@@ -1,32 +1,33 @@
-name: Auto Deploy
+name: Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
 
 jobs:
+  checks:
+    uses: ./.github/workflows/ci.yml
+
   deploy:
+    needs: checks
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to server
-        uses: appleboy/ssh-action@v0.1.0
+      - uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 15m
           script: |
-            cd /var/www/zenmoney-belarus-banks
-            git pull
-            
-            source ~/.nvm/nvm.sh
-            
-            pnpm recursive install --frozen-lockfile
-
-            source scripts/deploy/main.sh
-            
-            pm2 reload ecosystem.config.cjs
+            set -e
+            cd /var/www/zenmoney/banks-by
+            git fetch origin main
+            git reset --hard origin/main
+            bash scripts/deploy/deploy.sh

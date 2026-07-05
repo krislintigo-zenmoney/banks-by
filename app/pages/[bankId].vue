@@ -1,26 +1,24 @@
-<template>
-  <div v-if="currentBank" class="default-animation">
-    <BankHero :bank="currentBank" />
-    <BankDetails :bank="currentBank" />
-  </div>
-</template>
-
 <script setup lang="ts">
 const route = useRoute()
 const { getBankById } = useBanks()
 
-const currentBank = computed(() => getBankById(String(route.params.bankId)))
-
-if (import.meta.server && !currentBank.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Bank not found' })
-}
+const currentBank = computed(() => getBankById(String(route.params['bankId'] ?? '')))
 
 watchEffect(() => {
-  if (import.meta.client && !currentBank.value) {
+  if (!currentBank.value) {
     throw createError({ statusCode: 404, statusMessage: 'Bank not found' })
   }
 })
 </script>
+
+<template>
+  <div>
+    <div v-if="currentBank" class="default-animation">
+      <BankHero :bank="currentBank" />
+      <BankDetails :bank="currentBank" />
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .default-animation {

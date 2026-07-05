@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
+import type { Bank } from '~/types/bank.types'
+
+const { bank } = defineProps<{ bank: Bank }>()
+
+const status = computed(() => BANK_STATUSES_MAP[bank.syncStatus])
+</script>
+
 <template>
   <NuxtLink
     :to="`/${bank.id}`"
@@ -12,12 +21,3 @@
     </div>
   </NuxtLink>
 </template>
-
-<script setup lang="ts">
-import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
-import type { Bank } from '~/types/bank.types'
-
-const props = defineProps<{ bank: Bank }>()
-
-const status = computed(() => BANK_STATUSES_MAP[props.bank.syncStatus])
-</script>

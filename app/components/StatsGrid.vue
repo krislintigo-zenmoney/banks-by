@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { active, warning, down } = defineProps<{ active: number; warning: number; down: number }>()
+</script>
+
 <template>
   <section class="hidden sm:flex flex-col sm:flex-row gap-4 mb-6 default-animation">
     <article class="flex-1 p-5 bg-white/5 rounded-3xl">
@@ -20,13 +24,11 @@
       <p class="text-red">Не работают</p>
     </div>
     <div class="text-4xl font-semibold">
-      <span class="text-green">{{ active }}</span> |
-      <span class="text-orange">{{ warning }}</span> |
+      <span class="text-green">{{ active }}</span>
+      |
+      <span class="text-orange">{{ warning }}</span>
+      |
       <span class="text-red">{{ down }}</span>
     </div>
   </article>
 </template>
-
-<script setup lang="ts">
-defineProps<{ active: number; warning: number; down: number }>()
-</script>

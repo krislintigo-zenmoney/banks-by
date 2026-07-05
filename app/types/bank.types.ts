@@ -18,17 +18,17 @@ export interface Bank {
     text: string
   }
 
-  updates: {
+  updates: Array<{
     date: string
     text: string
-  }[]
+  }>
 
   features: {
     title: string
-    text: string[]
+    text: Array<string>
   }
 
-  integration: string[]
+  integration: Array<string>
   supported: Record<
     'accounts' | 'cards' | 'deposits' | 'credits',
     { status: string; text: string; description: string }
