@@ -1,21 +1,28 @@
+<script setup lang="ts">
+const { banks } = useBanks()
+</script>
+
 <template>
   <div class="landing">
     <!-- HERO -->
     <section class="mt-16 mb-16 text-center">
       <h1 class="mb-6 text-5xl">
-        Какие банки Беларуси<br />
+        Какие банки Беларуси
+        <br />
         работают в Дзен-мани
       </h1>
       <p class="mb-6 text-lg text-muted">
-        Простой каталог банков с описанием способов подключения,<br />
+        Простой каталог банков с описанием способов подключения,
+        <br />
         ограничений и реального поведения синхронизации.
       </p>
       <div>
         <NuxtLink
           :to="`${banks[0]?.id}`"
           class="inline-flex justify-center items-center px-4 py-3 bg-primary rounded-xl text-black"
-          >Перейти к банкам</NuxtLink
         >
+          Перейти к банкам
+        </NuxtLink>
       </div>
     </section>
 
@@ -46,7 +53,3 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-const { banks } = useBanks()
-</script>

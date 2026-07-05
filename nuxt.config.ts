@@ -1,3 +1,5 @@
+import tsConfig from '@krislintigo/tsconfig/nuxt'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
@@ -25,6 +27,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  typescript: { tsConfig },
 
   devtools: { enabled: true },
 

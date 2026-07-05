@@ -1,3 +1,25 @@
+<script setup lang="ts">
+import type { Bank } from '~/types/bank.types'
+
+const { banks } = defineProps<{ banks: Array<Bank> }>()
+
+const search = ref<string>('')
+
+const filteredBanks = computed<Array<Bank>>(() => {
+  const term = search.value.trim().toLowerCase()
+
+  if (!term) {
+    return banks
+  }
+
+  return banks.filter((bank) => {
+    const haystack = [bank.name, bank.engName].join(' ').toLowerCase()
+
+    return haystack.includes(term)
+  })
+})
+</script>
+
 <template>
   <div>
     <div class="search mb-6">
@@ -30,21 +52,3 @@
     </nav>
   </div>
 </template>
-
-<script setup lang="ts">
-import type { Bank } from '~/types/bank.types'
-
-const props = defineProps<{ banks: Bank[] }>()
-
-const search = ref<string>('')
-
-const filteredBanks = computed<Bank[]>(() => {
-  const term = search.value.trim().toLowerCase()
-  if (!term) return props.banks
-
-  return props.banks.filter((bank) => {
-    const haystack = [bank.name, bank.engName].join(' ').toLowerCase()
-    return haystack.includes(term)
-  })
-})
-</script>

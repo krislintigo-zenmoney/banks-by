@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
+import { SYNC_TYPES_MAP } from '~/constants/sync-types'
+import type { Bank } from '~/types/bank.types'
+
+const { bank } = defineProps<{ bank: Bank }>()
+
+const status = computed(() => BANK_STATUSES_MAP[bank.syncStatus])
+</script>
+
 <template>
   <section class="mb-6 p-6 rounded-3xl bg-white/5">
     <div class="flex flex-col gap-4 mb-6">
@@ -8,7 +18,7 @@
         </div>
         <h2 class="mb-3 text-5xl hyphens-auto">{{ bank.name }}</h2>
         <div class="text-base text-muted">
-          <span>Не является сайтом банка. </span>
+          <span>Не является сайтом банка.</span>
           <span>Для обновления информации по этому банку напишите сюда:</span>
           <NuxtLink class="text-primary" to="https://t.me/krislintigo" external target="_blank">
             Telegram @krislintigo
@@ -40,13 +50,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { BANK_STATUSES_MAP } from '~/constants/bank-statuses'
-import { SYNC_TYPES_MAP } from '~/constants/sync-types'
-import type { Bank } from '~/types/bank.types'
-
-const props = defineProps<{ bank: Bank }>()
-
-const status = computed(() => BANK_STATUSES_MAP[props.bank.syncStatus])
-</script>

@@ -1,9 +1,35 @@
+<script setup lang="ts">
+defineSlots<{
+  default: () => unknown
+}>()
+
+const route = useRoute()
+const { banks, getBankById, getStats } = useBanks()
+
+const isMenuOpen = ref(false)
+
+const bankId = computed(() => String(route.params['bankId'] ?? ''))
+const currentBank = computed(() => getBankById(bankId.value))
+const stats = computed(() => getStats())
+
+watchEffect(() => {
+  if (bankId.value && !currentBank.value) {
+    throw createError({ statusCode: 404, statusMessage: 'Bank not found' })
+  }
+})
+
+watch(bankId, () => {
+  isMenuOpen.value = false
+})
+</script>
+
 <template>
   <div class="flex flex-col lg:flex-row">
     <SidebarNav :banks="banks" :class="{ 'blur-md': isMenuOpen }" />
 
     <button
       class="lg:hidden fixed bottom-5 right-5 z-50 size-14 pb-1 rounded-full bg-primary text-3xl"
+      type="button"
       @click="isMenuOpen = !isMenuOpen"
     >
       {{ isMenuOpen ? '×' : '☰' }}
@@ -32,23 +58,3 @@
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-const route = useRoute()
-const { banks, getBankById, getStats } = useBanks()
-
-const isMenuOpen = ref(false)
-
-const bankId = computed(() => route.params.bankId)
-const currentBank = computed(() => getBankById(String(bankId.value)))
-const stats = computed(() => getStats(banks.value))
-
-if (bankId.value && !currentBank.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Bank not found' })
-}
-
-watch(
-  () => route.params.bankId,
-  () => (isMenuOpen.value = false),
-)
-</script>
