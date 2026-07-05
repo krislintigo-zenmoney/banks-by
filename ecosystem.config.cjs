@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'ZMBB-C',
+      name: '[KZ]-banks-by',
       port: '5001',
       script: 'node ./.output/server/index.mjs',
     },
